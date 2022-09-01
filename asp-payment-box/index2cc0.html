@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from ronkapuscinski.ca/asp-payment-box/?product_id=642 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Aug 2022 02:43:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<style>html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+}
+
+html {
+	-webkit-overflow-scrolling: touch;
+}
+
+body {
+	overflow-y: scroll;
+}
+
+#checkmark-cont {
+	display: none;
+	position: relative;
+}
+
+#smoke-screen {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	left: 0;
+	z-index: 100;
+	cursor: wait;
+	background: rgba(255, 255, 255, .3);
+}
+
+.small-spinner {
+	box-sizing: border-box;
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 7px solid #ccc;
+	border-top-color: #0078e7;
+	animation: small-spinner .6s linear infinite;
+}
+
+@keyframes small-spinner {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.small-spinner {
+		top: 50%;
+		position: fixed;
+	}
+	#checkmark-cont {
+		top: 50%;
+		position: fixed;
+		margin-top: -15px;
+	}
+	.coupon-spinner {
+		top: .5em;
+	}
+	#tax-shipping-cont {
+		padding-top: 20px;
+	}
+}
+
+.Aligner {
+	background: rgba(0, 0, 0, .3);
+	z-index: -1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+	min-height: 100%;
+}
+
+#Aligner-item {
+	height: 0;
+	min-height: 0;
+	overflow: hidden;
+	position: relative;
+	border-radius: 6px;
+	background-color: #f5f5f7;
+	box-shadow: 0 12px 30px 0 rgba(0, 0, 0, .5), inset 0 1px 0 0 hsla(0, 0%, 100%, .65);
+	max-width: 700px;
+	margin: 45px 10px 50px 10px;
+	width: 0;
+}
+
+#test-mode {
+	display: none;
+}</style>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<title>Donation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type='text/javascript'>
+            /* <![CDATA[ */
+            var vars = {"data":{"initTime":1661827426,"product_id":"642","item_name":"Donation","quantity":1,"custom_quantity":"","amount_variable":true,"currency_variable":false,"currency":"CAD","stock_control_enabled":false,"stock_items":0,"show_remaining":false,"billing_address":true,"shipping_address":false,"coupons_enabled":false,"tos":0,"item_logo":"","url":"","client_secret":"","pi_id":"","amount":0,"item_price":0,"min_amount":500,"tax":0,"shipping":0,"descr":"Make a donation to Ron Kapuscinski's election campaign","tax_variations":[],"tax_variations_type":"b","custom_field":0,"custom_field_validation_regex":"","custom_field_validation_err_msg":"","stripe_receipt_email":1,"variations":[],"is_live":true,"button_key":"f98016f3954bab7b674b1391459e6cb4","create_token":false,"customer_email":"","customer_name":"","dont_save_card":true,"verify_zip":false,"checkout_lang":"auto","customer_default_country":"CA","hide_amount_input":"","show_your_order":0,"addons":[{"name":"hCaptcha","handler":"hCaptchaHandlerNG"}],"payment_methods":[{"id":"def","title":"Credit or debit card","before_title":" <svg id=\"i-creditcard\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"none\" stroke=\"currentcolor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5px\">\n\t\t\t\t<path d=\"M2 7 L2 25 30 25 30 7 Z M5 18 L9 18 M5 21 L11 21\" \/>\n\t\t\t\t<path d=\"M2 11 L2 13 30 13 30 11 Z\" fill=\"currentColor\" \/>\n\t\t\t<\/svg>"}],"addonHooks":[],"hcaptchaSiteKey":"74ca5230-2a6b-4a79-a899-8c025cd2b278","hcaptchaInvisible":1,"items":[]},"stripe_key":"pk_live_51LTDaXJx3zRXHCjHJHBQMmIepSVAViGydOCqXyCLycFClpZqhgMxzDOmm7OX6JVvaljb9MrkpNLlf1uDyFjhydLz00o1ITo0qp","stripe_api_ver":"2020-03-02","minAmounts":{"USD":50,"AUD":50,"BGN":100,"BRL":50,"CAD":50,"CHF":50,"COP":2000,"DKK":250,"EUR":50,"GBP":30,"HKD":400,"INR":50,"JPY":50,"MXN":1000,"MYR":200,"NOK":300,"NZD":50,"PLN":200,"RON":200,"SEK":300,"SGD":50,"AED":200},"zeroCents":["JPY","MGA","VND","KRW"],"ajaxURL":"https:\/\/ronkapuscinski.ca\/wp-admin\/admin-ajax.php","asp_pp_ajax_nonce":"1ae13fc046","asp_pp_ajax_create_pi_nonce":"3a53f559f8","currencyFormat":{"c":2,"d":".","t":",","s":"CA$","pos":"left"},"payBtnText":"Pay %s","amountOpts":{"applySepOpts":0,"decimalSep":".","thousandSep":","},"str":{"strEnterValidAmount":"Please enter a valid amount","strMinAmount":"Minimum amount is","strEnterQuantity":"Please enter quantity.","strQuantityIsZero":"Quantity can't be zero.","strQuantityIsFloat":"Quantity should be integer value.","strStockNotAvailable":"You cannot order more items than available: %d","strTax":"Tax","strShipping":"Shipping","strTotal":"Total:","strPleaseFillIn":"Please fill in this field.","strPleaseCheckCheckbox":"Please check this checkbox.","strMustAcceptTos":"You must accept the terms before you can proceed.","strCoupon":"Coupon","strRemoveCoupon":"Remove coupon","strRemove":"Remove","strStartFreeTrial":"Start Free Trial","strInvalidCFValidationRegex":"Invalid validation RegEx: ","strGetForFree":"Purchase for Free","strCurrencyNotSupported":"Currency not supported for this payment method.","strforRecurringPayments":" for upcoming recurring payments","str3DSecureFailed":"3D Secure failed.","strAbort3DSecure":"Abort 3D Secure check?"}};
+            /* ]]> */
+            </script>
+<link rel="icon" href="../wp-content/uploads/2022/07/campaign-box.jpg" />
+</head>
+
+<body id="product-642">
+	<div id="Aligner" class="Aligner">
+				<div id="global-spinner" class="small-spinner"></div>
+		<div id="Aligner-item">
+			<div id="smoke-screen">
+				<span id="btn-spinner" class="small-spinner"></span>
+				<div id="checkmark-cont">
+					<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+						<circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+						<path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
+				</div>
+				<div id="redirect-spinner" style="display:none;">
+					<span class="rs-arrow rs-arrow-first bounceAlpha"></span>
+					<span class="rs-arrow rs-arrow-second bounceAlpha"></span>
+				</div>
+			</div>
+			<div id="modal-header">
+								<span id="modal-close-btn" title="Close" tabindex="0">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+						<path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+					</svg>
+				</span>
+				<div id="item-name">Donation</div>
+				<div id="item-descr">Make a donation to Ron Kapuscinski&#039;s election campaign</div>
+			</div>
+			<div id="modal-body" class="pure-g">
+				<div class="pure-u-1">
+					<div id="global-error" >
+											</div>
+					<form method="post" id="payment-form" class="pure-form pure-form-stacked" >
+																		<div id="amount-cont" class="pure-u-1">
+							<label for="amount">Enter amount</label>
+							<input class="pure-input-1" id="amount" name="amount" inputmode="decimal" value="" required>
+							<div id="amount-error" class="form-err" role="alert"></div>
+						</div>
+																																																						<div id="name-email-outer-cont" class="pure-u-1">
+							<div class="pure-g">
+								<fieldset id="name-email-cont" style="width: 100%;">
+									<div class="pure-u-1 pure-u-md-11-24">
+										<label for="billing_name">Name</label>
+										<div style="position: relative;">
+											<svg id="i-user" class="icon input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+												<path d="M22 11 C22 16 19 20 16 20 13 20 10 16 10 11 10 6 12 3 16 3 20 3 22 6 22 11 Z M4 30 L28 30 C28 21 22 20 16 20 10 20 4 21 4 30 Z" />
+											</svg>
+											<input class="pure-input-1 has-icon" type="text" id="billing-name" name="billing_name" value="" required>
+										</div>
+									</div>
+									<div class="pure-u-md-1-24"></div>
+									<div class="pure-u-1 pure-u-md-12-24">
+										<label for="email">Email</label>
+										<div style="position: relative;">
+											<svg id="i-mail" class="icon input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+												<path d="M2 26 L30 26 30 6 2 6 Z M2 6 L16 16 30 6" />
+											</svg>
+											<input class="pure-input-1 has-icon" type="email" id="email" name="email" value="" required>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+						</div>
+												<div id="addr-cont" class="pure-g">
+																												<div id="billing-addr-cont">
+								<div class="half-inner-left">
+									<fieldset>
+										<div class="pure-u-1">
+											<legend>Billing info</legend>
+										</div>
+										<div class="pure-u-1 pure-u-md-14-24 baddr-toggle" style="position: relative;">
+											<label for="address">Address</label>
+											<div style="position: relative;">
+												<svg id="i-location" class="icon input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+													<circle cx="16" cy="11" r="4" />
+													<path d="M24 15 C21 22 16 30 16 30 16 30 11 22 8 15 5 8 10 2 16 2 22 2 27 8 24 15 Z" />
+												</svg>
+											</div>
+											<input class="pure-input-1 has-icon" type="text" id="address" name="address" required>
+										</div>
+										<div class="pure-u-md-1-24 baddr-hide"></div>
+										<div class="pure-u-1 pure-u-md-9-24 baddr-toggle" style="position: relative;">
+											<label for="city">City</label>
+											<input class="pure-input-1" type="text" id="city" name="city" required>
+										</div>
+										<div class="pure-u-1 pure-u-md-10-24 baddr-toggle" style="position: relative;">
+											<label for="country">Country</label>
+											<select class="pure-input-1" name="country" id="country" required>
+                                                <option value="0">—</option><option value="AF">Afghanistan</option><option value="AX">Aland Islands</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BT">Bhutan</option><option value="BO">Bolivia</option><option value="BQ">Bonaire</option><option value="BA">Bosnia and Herzegovina</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="VG">British Virgin Islands</option><option value="BN">Brunei</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA" selected>Canada</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos (Keeling) Islands</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CD">Congo, Democratic Republic of</option><option value="CG">Congo, Republic of</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="HR">Croatia</option><option value="CU">Cuba</option><option value="CW">Curacao</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guiana</option><option value="PF">French Polynesia</option><option value="TF">French Southern and Antarctic Lands</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heard Island and McDonald Islands</option><option value="HN">Honduras</option><option value="HK">Hong Kong</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="CI">Ivory Coast</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JE">Jersey</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="KI">Kiribati</option><option value="KP">Korea, Democratic People&#039;s Republic of</option><option value="KR">Korea, Republic of</option><option value="XK">Kosovo</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Laos</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macau</option><option value="MK">Macedonia</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="NL">Netherlands</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="MP">Northern Mariana Islands</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PW">Palau</option><option value="PS">Palestine</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn Islands</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Reunion</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="RW">Rwanda</option><option value="BL">Saint Barthelemy</option><option value="SH">Saint Helena, Ascension, and Tristan da Cunha</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="MF">Saint Martin</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">Sao Tome and Principe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SX">Sint Maarten</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="GS">South Georgia</option><option value="SS">South Sudan</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SZ">Swaziland</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="SY">Syria</option><option value="TW">Taiwan</option><option value="TJ">Tajikistan</option><option value="TZ">Tanzania</option><option value="TH">Thailand</option><option value="TL">Timor-Leste</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad and Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="GB">United Kingdom</option><option value="US">United States</option><option value="UM">United States Minor Outlying Islands</option><option value="VI">United States Virgin Islands</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VA">Vatican City</option><option value="VE">Venezuela</option><option value="VN">Vietnam</option><option value="WF">Wallis and Futuna</option><option value="EH">Western Sahara</option><option value="YE">Yemen</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option>											</select>
+										</div>
+																				<div class="pure-u-md-1-24 baddr-hide"></div>
+										<div class="pure-u-1 pure-u-md-6-24 baddr-toggle" style="position: relative;">
+											<label for="state">State</label>
+											<input class="pure-input-1" type="text" id="state" name="state">
+										</div>
+																				<div class="pure-u-md-1-24 baddr-hide"></div>
+										<div class="pure-u-1 pure-u-md-6-24 baddr-toggle">
+											<label for="postcode">Postcode</label>
+											<input class="pure-u-1" type="text" name="postcode" id="postcode">
+										</div>
+									</fieldset>
+								</div>
+							</div>
+																											</div>
+												<div id="card-cont" data-pm-name="def" class="pure-u-1">
+							<label for="card-element">Credit or debit card</label>
+							<div id="card-element">
+							</div>
+							<div id="card-errors" class="form-err" role="alert"></div>
+						</div>
+												<style>
+.asp-hcaptcha-container {
+	text-align: center;
+	height: 78px;
+	margin: 15px 0;
+	width: auto;
+	padding: 0 5px;
+}
+
+.asp-hcaptcha-invisible {
+	height: 0;
+	margin: 0 auto;
+}
+
+.asp-hcaptcha-container div {
+	margin: 0 auto;
+	height: 78px;
+}
+
+#hcaptcha-error {
+	text-align: center;
+}
+
+#asp-hcaptcha-privacy-notice {
+	font-size: 75%;
+	color: gray;
+	text-align: center;
+	margin: 5px 0;
+	opacity: 0.75;
+}
+		.hcaptcha-badge {visibility: hidden;}</style>
+<div id="asp-hcaptcha-container" class="asp-hcaptcha-container asp-hcaptcha-invisible" data-size="invisible"></div>
+		<div id="asp-hcaptcha-privacy-notice">This site is protected by hCaptcha and its 
+<a href="https://hcaptcha.com/privacy" target="_blank">Privacy Policy</a> and 
+<a href="https://hcaptcha.com/terms" target="_blank">Terms of Service</a> apply.</div>
+<div id="hcaptcha-error" class="form-err" role="alert">
+</div>
+								<div id="buttons-container">
+							<div class="pure-u-5-5" style="position: relative;">
+								<div id="submit-btn-cont" data-pm-name="def" class="pure-u-5-5 centered">
+									<button type="submit" id="submit-btn" class="pure-button pure-button-primary" disabled>Pay CA$0.00</button>
+								</div>
+															</div>
+						</div>
+						<input type="hidden" id="payment-intent" name="payment_intent" value="">
+						<input type="hidden" id="btn-uniq-id" name="btn_uniq_id" value="">
+						<input type="hidden" id="product-id" name="product_id" value="642">
+						<input type="hidden" name="process_ipn" value="1">
+						<input type="hidden" name="is_live" value="1">
+												<input type="hidden" value="" name="thankyou_page_url" id="thankyou_page_url">
+											</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<span id="threeds-iframe-close-btn" title="Close" tabindex="0">
+		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+			<path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+		</svg>
+	</span>
+	<link rel="stylesheet" href="../wp-content/plugins/stripe-payments/public/views/templates/default/pure599a.css?ver=2.0.67">
+<link rel="stylesheet" href="../wp-content/plugins/stripe-payments/public/views/templates/default/pp-style599a.css?ver=2.0.67">
+<script src="https://js.stripe.com/v3/"></script>
+<script src="../wp-includes/js/jquery/jquery4a5f.js?ver=1.12.4-wp"></script>
+<script src="../../js.hcaptcha.com/1/api85f1.js?onload=onloadCallback&amp;render=explicit"></script>
+<script src="../wp-content/plugins/stripe-payments/includes/hcaptcha/public/js/asp-hcaptcha-ng599a.js?ver=2.0.67"></script>
+<script src="../wp-content/plugins/stripe-payments/public/assets/js/md5.min599a.js?ver=2.0.67"></script>
+<script src="../wp-content/plugins/stripe-payments/public/assets/js/add-ons/tax-variations599a.js?ver=2.0.67"></script>
+<script src="../wp-content/plugins/stripe-payments/public/assets/js/pp-handler599a.js?ver=2.0.67"></script>
+	</body>
+
+
+<!-- Mirrored from ronkapuscinski.ca/asp-payment-box/?product_id=642 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Aug 2022 02:44:01 GMT -->
+</html>
